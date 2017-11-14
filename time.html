@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Live Date</title>
+		<link rel="stylesheet" href="style/timestyle.css" />
+		<script>
+			function startTime() {
+			var today = new Date();
+			var day = today.getDay();
+			var dayName = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			var date = today.getDate();
+			var month = today.getMonth();
+			var monthName = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+			var year = today.getFullYear();
+			var h = today.getHours();
+			var hour = today.getHours();
+			var minute = today.getMinutes();
+			var second = today.getSeconds();
+			minute = checkTime(minute);
+			second = checkTime(second);
+			document.getElementById('txt').innerHTML = monthName[month] + " " + date + ", " + year + "(" + dayName[day] + ") " + hour + ":" + minute + ":" + second;
+			setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+		</script>
+	</head>
+	<body onload="startTime()">
+		<fieldset>
+			<legend>Current Date and Time</legend>
+			<p id="txt"></p>
+		</fieldset>
+	</body>
+</html>

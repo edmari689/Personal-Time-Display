@@ -1,0 +1,28 @@
+body
+{
+background-image: url('timetheme.jpg');
+background-attachment: fixed;
+background-size: 100%;
+}
+
+legend
+{
+color:#FF0000;
+font-size:30px;
+font-family:Script MT Bold;
+}
+
+fieldset
+{
+background-color: white;
+border: double;
+position:absolute;
+left:15%;
+top:10%;
+}
+
+p 
+{
+text-align: center;
+font-size: 30px;
+}
